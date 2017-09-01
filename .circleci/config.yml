@@ -6,6 +6,8 @@ jobs:
       - image: circleci/node:7
     steps:
       - checkout
+      - run: composer install --prefer-source --no-interaction
       - run: npm install
       - run: npm test
       - run: phpunit
+
